@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Заказ
+{% endblock %}
+
+{% block body %}
+<div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Оформление заказа</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">Имя</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Действительное имя обязательно.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Фамилия</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Действительная фамилия обязательна.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label class="form-label">Номер изделия</label>
+              <input type="text" class="form-control" id="num" placeholder="3445678" required="">
+              <div class="invalid-feedback">
+                Пожалуйста, введите номер изделия.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Эл. адрес </label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Пожалуйста, введите действующий адрес электронной почты для получения информации о доставке.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Адрес</label>
+              <input type="text" class="form-control" id="address" placeholder="ул. Ленина" required="">
+              <div class="invalid-feedback">
+                Пожалуйста, введите свой адрес доставки.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Телефон </label>
+              <input type="text" class="form-control" id="address2" placeholder="номер">
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Страна</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Выберите...</option>
+                <option>Россия</option>
+                <option>Белоруссия</option>
+                <option>Украина</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите действующую страну.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">Город</label>
+              <select class="form-select" id="state" required="">
+                <option value="">Выберите...</option>
+                <option>Уфа</option>
+                <option>Нефтекамск</option>
+                <option>Стерлитамак</option>
+              </select>
+              <div class="invalid-feedback">
+                Пожалуйста, выберите город.
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <label for="zip" class="form-label">Индекс</label>
+              <input type="text" class="form-control" id="zip" placeholder="" required="">
+              <div class="invalid-feedback">
+                Почтовый индекс обязателен.
+              </div>
+            </div>
+          </div>
+
+          <hr class="my-4">
+
+
+
+          <hr class="my-4">
+
+          <h4 class="mb-3">Оплата</h4>
+
+          <div class="my-3">
+            <div class="form-check">
+              <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+              <label class="form-check-label" for="credit">При получении наличными</label>
+            </div>
+            <div class="form-check">
+              <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+              <label class="form-check-label" for="debit">Оплата онлайн</label>
+            </div>
+
+          </div>
+
+          <button class="w-100 btn btn-primary btn-lg" onClick='location.href="http://127.0.0.1:5000/first"' type="submit">Оформить заказ</button>
+        </form>
+      </div>
+{% endblock %}

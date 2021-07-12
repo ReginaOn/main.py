@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block body %}
+<div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Украшение вашей мечты</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Сделано по вашим эскизам</li>
+              <li>Отразит именно ваши задумки и желания</li>
+              <li>Наш консультант свяжется с вами в течении 5 минут</li>
+              <li>Для заказа необходимо авторизоваться</li>
+            </ul>
+               <button type="button" onClick='location.href="/login"' class="w-100 btn btn-lg btn-primary">Войти</button>
+          </div>
+        </div>
+      </div>
+  <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Готовые изделия</h4>
+          </div>
+          <div class="card-body">
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>Ручная работа</li>
+              <li>Фиксированная цена</li>
+              <li>Для оформления наш менеджер свяжется с вами в течение 5 минут</li>
+              <li>Без возможности внести изменения в изделие</li>
+            </ul>
+            <button type="button" onClick='location.href="/magazin"' class="w-100 btn btn-lg btn-primary">Перейти к просмотру</button>
+          </div>
+        </div>
+      </div>
+</div>
+{% endblock %}
