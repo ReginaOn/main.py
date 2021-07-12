@@ -62,11 +62,11 @@ def reqistr():
         session = db_session.create_session()
         if session.query(User).filter(User.email == form.email.data).first():
             return render_template('registr.html', title='Регистрация', form=form, message="Такой пользователь уже есть")
-        user = User(name=form.name.data, email=form.email.data, about=form.about.data)
+        user = User(email=form.email.data, name=form.name.data)
         user.set_password(form.password.data)
         session.add(user)
         session.commit()
-        return redirect('/input')
+        return redirect('/login')
     return render_template('registr.html', title='Регистрация', form=form)
 
 

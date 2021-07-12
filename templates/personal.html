@@ -33,6 +33,16 @@
               </div>
             </div>
 
+            {% if current_user.is_authenticated %}
+              <div class="col-12">
+              <label class="form-label">Корректировки в изделие</label>
+              <input type="text" class="form-control" id="corr" placeholder="Добавить стразы,..." required="">
+              <div class="invalid-feedback">
+                Пожалуйста, введите номер изделия.
+              </div>
+            </div>
+              {% endif %}
+
             <div class="col-12">
               <label for="email" class="form-label">Эл. адрес </label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
